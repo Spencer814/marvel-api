@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Marvel</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="handlebars-v4.0.5.js"></script>
+  <!--<link rel="stylesheet" href="style.css">-->
+    </head>
+    <body>
+
+    <div id="results"></div>
+    <div id="status"></div>
+
+    <script id="reportTemplate" type="text/x-handlebars-template">
+        <h1>{{year}}</h1>
+        <p>
+        Average Price: ${{avgPrice}}<br/>
+        Low/High Price: ${{minPrice}} / ${{maxPrice}}<br/>
+        Average Page Count: {{avgPageCount}}<br/>
+        </p>
+        {{#each thumbs}}
+        <img src="{{this}}" class="thumb">
+        {{/each}}
+        <br clear="left">
+        <p/>
+    </script>
+    <script src="app.js"></script>
+
+    </body>
+</html>
